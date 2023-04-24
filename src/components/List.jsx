@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import db from "../firebase";
+import { Table } from "react-bootstrap";
 
 const List = () => {
   const [data, setData] = useState([]);
@@ -20,8 +21,8 @@ const List = () => {
   };
 
   return (
-    <div>
-      <div className="cursor-pointer m-4 p-0" onClick={handleBack}>
+    <div className="container">
+      <div className="m-4 p-0" onClick={handleBack} role="button">
         <span className="">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +35,7 @@ const List = () => {
         </span>
       </div>
       <div className="flex flex-col items-center">
-        <table className="">
+        <Table responsive striped bordered hover>
           <thead>
             <tr>
               <th>Full URL</th>
@@ -67,7 +68,7 @@ const List = () => {
               </tr>
             ))}
           </tbody>
-        </table>
+        </Table>
       </div>
     </div>
   );

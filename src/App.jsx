@@ -3,6 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Redirect from "./components/Redirect";
 import List from "./components/List";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (
